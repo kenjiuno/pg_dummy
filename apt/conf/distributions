@@ -1,0 +1,7 @@
+Origin: me
+Label: myrepo
+Codename: myrepo
+Architectures: amd64
+Components: main
+Description: myrepo
+SignWith: 97EF4BE15A920E4E

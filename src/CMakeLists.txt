@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.7.2)
 
 set(CMAKE_BUILD_TYPE Release)
 
-if(NOT UNIX) {
+if(NOT UNIX)
     message(FATAL_ERROR "not UNIX!")
-}
+endif()
 
 execute_process(
     COMMAND pg_config --includedir-server 
@@ -47,7 +47,7 @@ set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
 # See: https://cmake.org/cmake/help/v3.7/module/CPackDeb.html
 set(CPACK_GENERATOR DEB)
 
-set(CPACK_PACKAGE_NAME "postgresql-10-pg_dummy")
+set(CPACK_PACKAGE_NAME "postgresql-10-pgdummy")
 set(CPACK_PACKAGE_VERSION "0.1.0")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "postgresql-10")
 set(CPACK_PACKAGE_CONTACT "kenjiuno <ku@digitaldolphins.jp>")

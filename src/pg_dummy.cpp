@@ -1,4 +1,5 @@
 #include <postgres.h>
+#include <fmgr.h>
 #include <stdint.h>
 
 PG_MODULE_MAGIC;
