@@ -1,0 +1,16 @@
+version: "3"
+services:
+  builder:
+    build:
+      context: builder
+      dockerfile: Dockerfile
+    container_name: "builder"
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    ports:
+      - "15432:5432"
+    volumes:
+      - ../apt:/apt
+      - ../src:/src
